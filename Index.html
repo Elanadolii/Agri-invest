@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -292,7 +291,7 @@
             </div>
 
             <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-                <!-- Contact Info Box (Dark Theme) -->
+                <!-- Contact Info Box -->
                 <div class="lg:w-2/5 bg-primary p-10 text-white flex flex-col justify-between">
                     <div>
                         <h3 class="text-2xl font-bold mb-6">معلومات الاتصال</h3>
@@ -312,4 +311,152 @@
                             </div>
                             
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shri
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-1">رقم الهاتف</h5>
+                                    <p class="text-gray-300 text-sm" dir="ltr">[+000 000 0000]</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-1">البريد الإلكتروني</h5>
+                                    <p class="text-gray-300 text-sm">[info@company.com]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Placeholder Socials -->
+                    <div class="mt-12 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-secondary rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-secondary rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-secondary rounded-full flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-3/5 p-10">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">أرسل لنا رسالة</h3>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('هذا نموذج تجريبي، سيتم ربطه بالبريد الإلكتروني لاحقاً.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">الاسم الكامل</label>
+                                <input type="text" placeholder="الاسم" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">رقم الهاتف</label>
+                                <input type="tel" placeholder="رقم الهاتف" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">البريد الإلكتروني</label>
+                            <input type="email" placeholder="البريد الإلكتروني" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">موضوع الرسالة</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors text-gray-600">
+                                <option>استفسار عام</option>
+                                <option>طلب شراكة</option>
+                                <option>استثمار زراعي</option>
+                                <option>استثمار حيواني</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">رسالتك</label>
+                            <textarea rows="4" placeholder="اكتب رسالتك هنا..." class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryLight text-white font-bold py-4 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-secondary text-white rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="font-bold text-xl md:text-2xl">الدولية للاستثمار</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        نستثمر في الأرض ونبني مستقبل الغذاء. شركة متخصصة في الاستثمارات الزراعية والحيوانية وفق أحدث معايير التنمية المستدامة.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">روابط سريعة</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-secondary transition-colors"><i class="fa-solid fa-chevron-left text-xs ml-2 text-secondary"></i>الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-secondary transition-colors"><i class="fa-solid fa-chevron-left text-xs ml-2 text-secondary"></i>من نحن</a></li>
+                        <li><a href="#sectors" class="text-gray-400 hover:text-secondary transition-colors"><i class="fa-solid fa-chevron-left text-xs ml-2 text-secondary"></i>مجالات الاستثمار</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-secondary transition-colors"><i class="fa-solid fa-chevron-left text-xs ml-2 text-secondary"></i>تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal / Disclaimer -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">ملاحظة تنظيمية</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        هذه الصفحة هي موقع تعريفي مبدئي. سيتم تحديث كافة البيانات القانونية، وسجلات الشركة، وتراخيص الاستثمار فور إدراجها واعتمادها رسمياً.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 جميع الحقوق محفوظة لشركة الدولية للاستثمار الزراعي والحيواني.
+                </p>
+                <div class="text-gray-500 text-sm">
+                    تصميم احترافي للشركات
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Navbar styling on scroll -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar styling on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('glass-nav', 'bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-white', 'glass-nav');
+            }
+        });
+    </script>
+</body>
+</html>
