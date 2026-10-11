@@ -1,0 +1,315 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدولية للاستثمار الزراعي والحيواني</title>
+    
+    <!-- Google Fonts: Cairo for professional Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14532d', /* Dark Green */
+                        primaryLight: '#166534',
+                        secondary: '#d97706', /* Gold/Amber */
+                        secondaryHover: '#b45309',
+                        light: '#f8fafc',
+                        darkText: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for smooth scrolling and general aesthetics */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(20, 83, 45, 0.8), rgba(20, 83, 45, 0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+<body class="text-darkText overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="font-bold text-xl text-primary md:text-2xl">الدولية للاستثمار</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-semibold transition">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-semibold transition">من نحن</a>
+                    <a href="#sectors" class="text-gray-700 hover:text-primary font-semibold transition">مجالات الاستثمار</a>
+                    <a href="#why-us" class="text-gray-700 hover:text-primary font-semibold transition">لماذا نحن</a>
+                    <a href="#contact" class="bg-secondary hover:bg-secondaryHover text-white px-6 py-2 rounded-full font-semibold transition shadow-md hover:shadow-lg">تواصل معنا</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary font-semibold rounded-md">الرئيسية</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary font-semibold rounded-md">من نحن</a>
+                <a href="#sectors" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary font-semibold rounded-md">مجالات الاستثمار</a>
+                <a href="#why-us" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary font-semibold rounded-md">لماذا نحن</a>
+                <a href="#contact" class="block px-3 py-2 text-secondary font-bold rounded-md">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20 relative">
+        <div class="text-center px-4 max-w-4xl mx-auto z-10">
+            <span class="text-secondary font-bold text-lg md:text-xl mb-4 block tracking-wider">رؤية نحو مستقبل مستدام</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                نستثمر في الأرض... <br> ونبني مستقبل الغذاء
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                نلتزم بتقديم حلول استثمارية متكاملة في قطاعي الزراعة والثروة الحيوانية، مستندين إلى أسس التنمية المستدامة لتلبية احتياجات الحاضر وتأمين متطلبات المستقبل.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-secondary hover:bg-secondaryHover text-white text-lg px-8 py-4 rounded-full font-bold transition duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-block">
+                    تواصل معنا لبدء الاستثمار
+                </a>
+                <a href="#about" class="bg-white/20 hover:bg-white/30 text-white border border-white/50 text-lg px-8 py-4 rounded-full font-bold transition duration-300 inline-block backdrop-blur-sm">
+                    تعرف علينا أكثر
+                </a>
+            </div>
+        </div>
+        
+        <!-- Shape Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-12 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.3,197.97,97.7,243.68,82.88,284.18,63.36,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="أراضي زراعية" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[400px]">
+                        <div class="absolute -bottom-6 -left-6 w-full h-full border-4 border-secondary rounded-2xl z-0"></div>
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full z-0 blur-xl"></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold mb-4">من نحن</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">شريكك الموثوق في التنمية الزراعية والحيوانية</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed text-justify">
+                        [نص تعريفي قابل للتعديل] - تأسست "الدولية للاستثمار الزراعي والحيواني" برؤية واضحة تهدف إلى تعزيز الأمن الغذائي ودعم الاقتصاد الوطني من خلال مشاريع استراتيجية متكاملة. نحن نؤمن بأن الأرض هي أساس الثروة، ولذلك نسعى دائماً لتوظيف أحدث التقنيات وأفضل الممارسات العالمية.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed text-justify">
+                        نجمع بين الخبرة العميقة في إدارة الموارد الطبيعية والابتكار المستمر لتقديم نموذج استثماري رائد ومستدام، يضمن تحقيق أعلى معدلات الإنتاجية مع الحفاظ على البيئة للأجيال القادمة.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1 text-xl"></i>
+                            <span class="text-gray-700 font-semibold text-lg">رؤية استراتيجية واضحة للمستقبل.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-secondary mt-1 text-xl"></i>
+                            <span class="text-gray-700 font-semibold text-lg">فريق عمل متخصص من الخبراء والاستشاريين.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Sectors Section -->
+    <section id="sectors" class="section-padding bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold mb-4">مجالات عملنا</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">نستثمر في قطاعات حيوية لمستقبل أفضل</h2>
+                <p class="text-gray-600 text-lg">
+                    تتنوع مجالات استثمارنا لتشمل أهم القطاعات التي تساهم في تحقيق الاكتفاء الذاتي والأمن الغذائي المستدام.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-light rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fa-solid fa-tractor text-4xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkText mb-3">الاستثمار الزراعي</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        [نص قابل للتعديل] إدارة وتطوير الأراضي الزراعية الواسعة باستخدام أحدث تقنيات الري والزراعة الحديثة.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-light rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fa-solid fa-wheat-awn text-4xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkText mb-3">الإنتاج النباتي</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        [نص قابل للتعديل] زراعة المحاصيل الاستراتيجية والخضروات والفواكه بمعايير تصديرية عالية الجودة.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-light rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fa-solid fa-cow text-4xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkText mb-3">الثروة الحيوانية</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        [نص قابل للتعديل] مشاريع تسمين العجول وإنتاج الألبان وتربية الدواجن وفق أفضل الشروط الصحية.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-light rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fa-solid fa-industry text-4xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkText mb-3">مشروعات الإنتاج الغذائي</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        [نص قابل للتعديل] إنشاء وإدارة خطوط إنتاج لتصنيع وتعبئة المنتجات الزراعية والحيوانية للسوق المحلي والعالمي.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section-padding bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/3">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">لماذا تختار شراكتنا؟</h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                        نحن لا نكتفي بتقديم المشاريع، بل نبني أسساً قوية تعتمد على المبادئ المهنية الراسخة لضمان نجاح واستدامة استثماراتنا.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondaryHover text-white px-6 py-3 rounded-full font-bold transition">
+                        <span>ابدأ استثمارك معنا</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-award"></i></div>
+                        <h4 class="text-xl font-bold mb-2">الالتزام بالجودة</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            تطبيق معايير صارمة في كافة مراحل الإنتاج لضمان تقديم منتجات نهائية تليق باسم الشركة وتطلعات السوق.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4 class="text-xl font-bold mb-2">التخطيط المدروس</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            الاعتماد على دراسات جدوى دقيقة واستراتيجيات مرنة تضمن تحقيق عوائد مستدامة وتقليل المخاطر.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                        <h4 class="text-xl font-bold mb-2">التنمية المستدامة</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            الحفاظ على الموارد الطبيعية وتطبيق أحدث الممارسات الصديقة للبيئة لضمان استمرارية الإنتاج دون الإضرار بالبيئة.
+                        </p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                        <h4 class="text-xl font-bold mb-2">الشفافية والثقة</h4>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            بناء علاقات طويلة الأمد مع شركائنا وعملائنا قائمة على الوضوح التام والنزاهة في كافة التعاملات.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <div class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold mb-4">تواصل معنا</div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">نحن هنا للإجابة على استفساراتك</h2>
+                <p class="text-gray-600 text-lg">
+                    يسعدنا تواصلكم معنا لمناقشة فرص التعاون والاستثمار. البيانات أدناه قابلة للتحديث لتلائم مقر الشركة الفعلي.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <!-- Contact Info Box (Dark Theme) -->
+                <div class="lg:w-2/5 bg-primary p-10 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">معلومات الاتصال</h3>
+                        <p class="text-gray-300 mb-8 text-sm leading-relaxed">
+                            بمجرد توفر البيانات الرسمية، سيتم تحديث هذا القسم ليحتوي على أرقام الهواتف، البريد الإلكتروني، والعنوان الفعلي للمقر الرئيسي.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-1">العنوان الرئيسي</h5>
+                                    <p class="text-gray-300 text-sm">[يرجى إدراج عنوان الشركة هنا]</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shri
